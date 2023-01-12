@@ -10,7 +10,7 @@ const events=reactive([])
 
 onMounted(()=>{
 
-  axios.get('http://localhost/regs/api/json')
+  axios.get('http://220.128.133.15/regs/api/json')
        .then(response=>{
 
         console.log(response)
