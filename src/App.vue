@@ -10,15 +10,12 @@ const events=reactive([])
 
 onMounted(()=>{
 
-  axios.get('https://kktix.com/events.json')
+  axios.get('http://localhost/regs/api/json')
        .then(response=>{
-        return response.data;
+
+        console.log(response)
        })
-       .then(data=>{
-          data.entry.forEach(e=>{
-            events.push(e)
-          })
-       })
+
 
 })
 
@@ -27,9 +24,7 @@ onMounted(()=>{
 
 <template>
 <ul>
-  <li v-for="e,i in events " :key="i">
-    {{ e.author.name }}
-  </li>
+
 </ul>
 </template>
 
