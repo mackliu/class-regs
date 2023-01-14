@@ -10,7 +10,7 @@ const events=reactive([])
 
 onMounted(()=>{
 
-  axios.get('http://220.128.133.15/regs/api/json')
+  axios.get('https://wda.mackliu.com/regs/api/json')
        .then(response=>{
 
         console.log(response)
